@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page</title>
+    <!-- HTMX - https://htmx.org/ -->
+    <script src="{{ url_for('static', path='/js/htmx.js') }}" defer></script> 
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to my simple page!</h1>
+        <button hx-get="/click" hx-swap="outerHTML">Click me!</button>
+    </div>
+</body>
+</html>
